@@ -38,17 +38,24 @@ const dbConfig = {
   user: process.env.MYSQL_ADDON_USER || 'root',
   password: process.env.MYSQL_ADDON_PASSWORD || '',
   database: process.env.MYSQL_ADDON_DB || 'vulnerable_bank',
-  port: process.env.MYSQL_ADDON_PORT || 3306
+  port: process.env.MYSQL_ADDON_PORT || 3306,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  enableKeepAlive: true,
+  keepAliveInitialDelay: 0
 };
 
 let db;
 
 async function connectDB() {
   try {
-    // Connect to database using environment variables
-    db = await mysql.createConnection(dbConfig);
-    console.log('Connected to MySQL database');
+    // Create connection pool instead of single connection
+    db = await mysql.createPool(dbConfig);
+    console.log('Connected to MySQL database pool');
     
+    // Test the connection
+    await db.query('SELECT 1');
     console.log('Database connection successful!');
   } catch (error) {
     console.error('Database connection error:', error.message);
