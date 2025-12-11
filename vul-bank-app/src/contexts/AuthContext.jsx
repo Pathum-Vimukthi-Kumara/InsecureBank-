@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { AuthContext } from './AuthContextCreate';
+import API_URL from '../config/api';
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   // Configure axios defaults
-  axios.defaults.baseURL = 'http://localhost:5000';
+  axios.defaults.baseURL = API_URL;
   axios.defaults.withCredentials = true;
 
   useEffect(() => {
