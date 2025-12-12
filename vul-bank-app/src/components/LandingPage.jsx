@@ -54,26 +54,26 @@ const LandingPage = () => {
           <div className="carousel-track">
             <div className="carousel-image">
               <img
-                src="/src/assets/hero-images/hero-1.png"
+                src="public\hero-images\hero-1.png"
                 alt="Banking Service 1"
               />
             </div>
             <div className="carousel-image">
               <img
-                src="/src/assets/hero-images/hero-2.png"
+                src="public\hero-images\hero-2.png"
                 alt="Banking Service 2"
               />
             </div>
             <div className="carousel-image">
               <img
-                src="/src/assets/hero-images/hero-3.png"
+                src="public\hero-images\hero-3.png"
                 alt="Banking Service 3"
               />
             </div>
             {/* Duplicate for seamless loop */}
             <div className="carousel-image">
               <img
-                src="/src/assets/hero-images/hero-1.png"
+                src="public\hero-images\hero-1.png"
                 alt="Banking Service 1"
               />
             </div>

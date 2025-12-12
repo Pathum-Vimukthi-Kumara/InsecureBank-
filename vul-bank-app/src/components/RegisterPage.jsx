@@ -59,7 +59,7 @@ const RegisterPage = () => {
       {/* Left Side - Full Height Image */}
       <div className="hidden lg:block">
         <div className="register-image-container">
-          <img src="/src/assets/register-image.png" alt="Join Banking" />
+          <img src="public\register-image.png" alt="Join Banking" />
         </div>
       </div>
 
