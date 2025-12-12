@@ -116,7 +116,7 @@ const LoginPage = () => {
       {/* Left Side - Full Height Image */}
       <div className="hidden lg:block">
         <div className="login-image-container">
-          <img src="/src/assets/login-image.png" alt="Secure Banking" />
+          <img src="public\login-image.png" alt="Secure Banking" />
         </div>
       </div>
 
